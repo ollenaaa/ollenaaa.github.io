@@ -1,0 +1,14 @@
+[
+  {
+    "minValue": 42,
+    "maxValue": 56
+  },
+  {
+    "minValue": 57,
+    "maxValue": 71
+  },
+  {
+    "minValue": 72,
+    "maxValue": 86
+  }
+]

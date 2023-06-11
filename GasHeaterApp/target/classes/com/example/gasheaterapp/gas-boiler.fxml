@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #d7d7d7" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gasheaterapp.GasBoilerController">
+    <children>
+        <Pane id="warningPane" fx:id="warningPane" prefHeight="80.0" prefWidth="600.0" style="-fx-border-width: 2px; -fx-border-color: #c6c6c6; -fx-border-style: solid; -fx-background-color: #abffb9;">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+            <children>
+                <Label fx:id="warningLable" text="INFORMATION! Temperature is normal.">
+                    <font>
+                        <Font name="Times New Roman" size="24.0" />
+                    </font>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding></Label>
+                <Label layoutY="32.0" text="Range of temperature:">
+                    <font>
+                        <Font name="Hoefler Text" size="24.0" />
+                    </font>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding></Label>
+                <ComboBox fx:id="rangeTemperatures" layoutX="257.0" layoutY="32.0" onAction="#rangeOfTemperatures" prefHeight="26.0" prefWidth="124.0" style="-fx-font-family:Times New Roman" />
+            <Button layoutX="388.0" layoutY="32.0" mnemonicParsing="false" onAction="#AddRange" prefHeight="26.0" prefWidth="90.0" text="Add Range">
+               <font>
+                  <Font name="Hoefler Text" size="13.0" />
+               </font></Button>
+            <Button layoutX="483.0" layoutY="32.0" mnemonicParsing="false" onAction="#DeleteRange" text="Delete Range">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font></Button>
+            </children>
+        </Pane>
+        <Pane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" style="-fx-border-width: 2px; -fx-border-color: #c6c6c6; -fx-border-style: solid; -fx-background-color: #fffff8;">
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin></Pane>
+        <HBox alignment="CENTER" prefHeight="80.0" prefWidth="600.0">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" />
+            </VBox.margin>
+            <children>
+                <Button fx:id="plus" mnemonicParsing="false" onAction="#plusTemperature" text="+">
+                    <HBox.margin>
+                        <Insets left="50.0" />
+                    </HBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font></Button>
+                <Button fx:id="auto" mnemonicParsing="false" onAction="#Auto" prefHeight="35.0" prefWidth="68.0" text="AUTO">
+                    <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </HBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font></Button>
+                <Button fx:id="minus" mnemonicParsing="false" onAction="#minusTemperature" text="-">
+                    <HBox.margin>
+                        <Insets right="50.0" />
+                    </HBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font></Button>
+            </children></HBox>
+    </children>
+</VBox>
